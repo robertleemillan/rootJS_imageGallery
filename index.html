@@ -22,22 +22,27 @@
 		}
 	</style>
 </head>
-
 <body>
-
 </body>
 	<script>
 
+	// add images here based on photos in the images folder
+	// each image name needs to be a string
+	// remember, the images are in a folder called "image"
+
 	var images = [
-		//add images here based on photos in the images folder.
-		//each image name needs to be a string
-		//remember, the images are in a folder called "image"
+		"images/7a6f37eded84a07844dc308b8e3fa790.jpg",
+		"images/maxresdefault.jpg",
+		"images/photo-129299193.jpg",
+		"images/photographing-landscapes-3e.jpg",
+		"images/tropical-beach-landscapes.jpg"
 	];
 
-	// call one of the functions below.  Give it an argument of the
-	// images array above
-	
+	// call one of the functions below
+	// give it an argument of the images array above
 
+	displayImagesInGallery(images);
+	
 	/******** you don't need to modify anything below this line ******/
 	function displayImagesInGallery(imageArray){
 		for(var imageIndex = 0; imageIndex < imageArray.length; imageIndex++){
@@ -45,8 +50,6 @@
 			document.querySelector('body').appendChild(image);
 		}
 	}
-
-
 	function createImageElement(imgSource){
 		var imgContainer = document.createElement('FIGURE');
 		imgContainer.className = "galleryImg"
@@ -55,6 +58,5 @@
 		imgContainer.appendChild(imgElement)
 		return imgContainer;
 	}
-
 	</script>
 </html>
